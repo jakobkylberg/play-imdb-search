@@ -29,10 +29,10 @@ public class OMDbTitle {
     public String imdbID;
     public String Type;
     public String Response;
-    public String searchResultType;
+    public SearchResultType searchResultType;
 
     public String getSearchResultType() {
-        return searchResultType;
+        return searchResultType.name();
     }
 }
 
