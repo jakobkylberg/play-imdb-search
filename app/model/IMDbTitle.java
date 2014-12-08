@@ -12,5 +12,6 @@ public class IMDbTitle {
     public String title_description;
     public String episode_title;
     public String description;
+    public String searchResultType;
 
 }

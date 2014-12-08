@@ -1,9 +1,12 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Class representing a title from OMDb
  *
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OMDbTitle {
 
     public String Title;
@@ -26,7 +29,11 @@ public class OMDbTitle {
     public String imdbID;
     public String Type;
     public String Response;
+    public String searchResultType;
 
+    public String getSearchResultType() {
+        return searchResultType;
+    }
 }
 
 

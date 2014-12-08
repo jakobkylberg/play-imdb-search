@@ -1,12 +1,15 @@
-@(iMDbTitleContainer: model.IMDbTitleContainer)
+@(oMDbTitleContainer: model.OMDbTitleContainer)
 
 <!DOCTYPE html>
 
-@displayTitles(titles: List[model.IMDbTitle]) = {
-@for(title <- titles) {
-    <li><p>@title.title (id: @title.id)</p>
-        Description: @Html(title.description)
-    </li>
+@displayTitles(titles: List[model.OMDbTitle]) = {
+@if(titles != null) {
+    @for(title <- titles) {
+        <li><p>@title.Title (id: @title.imdbID)</p>
+            Plot: @title.Plot
+            Rating: @title.imdbRating
+        </li>
+    }
 }
 }
 
@@ -19,16 +22,15 @@
             iMDb title search: <input type="text" name="query">
             <input type="submit" value="Search">
         </form>
-
         <ul>
             <h3>Popular matches:</h3>
-            @displayTitles(iMDbTitleContainer.title_popular)
+            @displayTitles(oMDbTitleContainer.title_popular)
             <h3>Exact matches:</h3>
-            @displayTitles(iMDbTitleContainer.title_exact)
+            @displayTitles(oMDbTitleContainer.title_exact)
             <h3>Approximative matches:</h3>
-            @displayTitles(iMDbTitleContainer.title_approx)
+            @displayTitles(oMDbTitleContainer.title_approx)
             <h3>Substring matches:</h3>
-            @displayTitles(iMDbTitleContainer.title_substring)
+            @displayTitles(oMDbTitleContainer.title_substring)
         </ul>
     </body>
 </html>
