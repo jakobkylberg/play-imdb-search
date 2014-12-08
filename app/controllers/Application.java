@@ -3,6 +3,7 @@ package controllers;
 import model.OMDbTitleContainer;
 import play.libs.F;
 import play.libs.Json;
+import views.html.*;
 
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -25,10 +26,10 @@ public class Application extends Controller {
 
     public static F.Promise<Result> searchGUI(String query) {
         if (query == null || query.isEmpty()) {
-            return F.Promise.promise(() -> ok(views.html.search.render(new OMDbTitleContainer())));
+            return F.Promise.promise(() -> ok(search.render(new OMDbTitleContainer())));
         }
         F.Promise<OMDbTitleContainer> omDbTitleContainerPromise = nonBlockingTitleService.getOMDbTitles(query);
-        return omDbTitleContainerPromise.map(views.html.search::render).map(Results::ok);
+        return omDbTitleContainerPromise.map(oMDbTitleContainer -> ok(search.render(oMDbTitleContainer)));
     }
 
 }
