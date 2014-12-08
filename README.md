@@ -10,7 +10,7 @@ Sök via GUI:
 http://localhost:9000/searchGUI
 
 Sök och få svar som JSON:
-http://localhost:9000/searchSync?query=\<söksträng\>
+http://localhost:9000/searchSync?query=[söksträng]
 
 ### Lab
 
@@ -27,8 +27,8 @@ Play framework, mer information om Play's WS-klient och promises
 https://www.playframework.com/documentation/2.3.x/JavaWS
 
 iMDb, sök-api:
-http://www.imdb.com/xml/find?json=1&nr=1&tt=on&q=\<söksträng\>
+http://www.imdb.com/xml/find?json=1&nr=1&tt=on&q=[söksträng]
 
 oMDb, titel-api:
-http://www.omdbapi.com/?i=\<imdb-id\>&plot=short&r=json
+http://www.omdbapi.com/?i=[imdb-id]&plot=short&r=json
 
