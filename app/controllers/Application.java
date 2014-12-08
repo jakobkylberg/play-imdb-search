@@ -2,7 +2,7 @@ package controllers;
 
 import model.IMDbTitleContainer;
 import play.libs.Json;
-
+import views.html.*;
 import play.mvc.Controller;
 import play.mvc.Result;
 import service.BlockingTitleService;
@@ -16,7 +16,7 @@ public class Application extends Controller {
     }
 
     public static Result searchGUI(String query) {
-        return ok(views.html.search.render(query.isEmpty() ?
+        return ok(search.render(query.isEmpty() ?
                 new IMDbTitleContainer() : blockingTitleService.getIMDbTitles(query)));
     }
 
