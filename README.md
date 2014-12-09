@@ -1,10 +1,10 @@
 ### Komigång
 
 Starta play:
-./activator run
+    ./activator run
 
 Starta play i debugläge, lyssnandes på port 9999:
-./activator -jvm-debug 9999 run
+    ./activator -jvm-debug 9999 run
 
 Sök via GUI:
 http://localhost:9000/searchGUI
@@ -26,9 +26,17 @@ https://www.playframework.com/documentation/2.3.x/Home
 Play framework, mer information om Play's WS-klient och promises
 https://www.playframework.com/documentation/2.3.x/JavaWS
 
-iMDb, sök-api:
+iMDb, sök-api som söker efter träffar på iMDb-titlar:
 http://www.imdb.com/xml/find?json=1&nr=1&tt=on&q=[söksträng]
 
-oMDb, titel-api:
+oMDb, titel-api som ger mer utförlig information utifrån en titel:
 http://www.omdbapi.com/?i=[imdb-id]&plot=short&r=json
 
+### Mer Play
+
+Mallar och exempel för Play framework, ladda ner Typesafe activator:
+https://www.playframework.com/download
+
+Starta med
+    activator ui
+för starta activator-GUI:et och skapa önskat exempel eller mall
