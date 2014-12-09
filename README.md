@@ -43,6 +43,6 @@ https://www.playframework.com/download
 
 Starta med
 ```
-activator ui
+./activator ui
 ```
 för starta activator-GUI:et och skapa önskat exempel eller mall
