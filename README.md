@@ -16,7 +16,7 @@ http://localhost:9000/searchSync?query=[söksträng]
 
 1. Skriv om den synkrona sökningen efter titlar till att bli icke-blockerande (tips: kedja promises)
 
-2. Den titelinformation man får i sökresultaten från iMDb är begränsade, berika resultaten genom att anropa oMDb:s api och hämta mer information
+2. Den titelinformation man får i sökresultaten från iMDb är begränsad, berika resultaten genom att anropa oMDb:s api och hämta mer information
 
 ### Länkar
 
