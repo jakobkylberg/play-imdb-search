@@ -1,10 +1,14 @@
 ### Komigång
 
 Starta play:
-    ./activator run
+```
+./activator run
+```
 
 Starta play i debugläge, lyssnandes på port 9999:
-    ./activator -jvm-debug 9999 run
+```
+./activator -jvm-debug 9999 run
+```
 
 Sök via GUI:
 http://localhost:9000/searchGUI
@@ -38,5 +42,7 @@ Mallar och exempel för Play framework, ladda ner Typesafe activator:
 https://www.playframework.com/download
 
 Starta med
-    activator ui
+```
+activator ui
+```
 för starta activator-GUI:et och skapa önskat exempel eller mall
