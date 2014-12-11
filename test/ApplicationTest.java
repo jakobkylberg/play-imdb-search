@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import model.OMDbTitleContainer;
 import org.junit.*;
 
 import play.mvc.*;
@@ -36,9 +37,9 @@ public class ApplicationTest {
 
     @Test
     public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
+        Content html = (Content)views.html.search.render(new OMDbTitleContainer());
         assertThat(contentType(html)).isEqualTo("text/html");
-        assertThat(contentAsString(html)).contains("Your new application is ready.");
+        assertThat(contentAsString(html)).contains("iMDb title search");
     }
 
 
