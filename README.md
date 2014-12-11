@@ -38,11 +38,11 @@ http://www.omdbapi.com/?i=[imdb-id]&plot=short&r=json
 
 ### Mer Play
 
-Mallar och exempel för Play framework, ladda ner Typesafe activator:
+För Play framework-mallar och exempel, ladda ner Typesafe activator:
 https://www.playframework.com/download
 
-Starta med
+Packa upp och kör
 ```
 ./activator ui
 ```
-för starta activator-GUI:et och skapa önskat exempel eller mall
+för att starta activator-GUI:et och därefter skapa önskat exempel eller mall.
