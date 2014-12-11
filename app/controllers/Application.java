@@ -25,7 +25,7 @@ public class Application extends Controller {
     }
 
     public static F.Promise<Result> searchGUI(String query) {
-        if (query == null || query.isEmpty()) {
+        if (query.isEmpty()) {
             return F.Promise.promise(() -> ok(search.render(new OMDbTitleContainer())));
         }
         F.Promise<OMDbTitleContainer> omDbTitleContainerPromise = nonBlockingTitleService.getOMDbTitles(query);
